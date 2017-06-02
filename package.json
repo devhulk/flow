@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/devhulk/flow/issues"
   },
-  "homepage": "https://github.com/devhulk/flow#readme"
+  "homepage": "https://github.com/devhulk/flow#readme",
+  "dependencies": {
+    "lodash": "^4.17.4"
+  }
 }

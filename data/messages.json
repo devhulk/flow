@@ -1,0 +1,56 @@
+[
+  {
+    "_id" : "0002",
+    "name" : "textmessage",
+    "type" : "",
+    "location" : "",
+    "start" : "",
+    "dueBy" : "",
+    "status" : "",
+    "previousNode" : "receive message",
+    "nextNode" : "send message",
+    "content" : "hi, how are you?"
+
+  },
+  {
+    "_id" : "0001",
+    "name" : "textmessage",
+    "type" : "",
+    "location" : "",
+    "start" : "",
+    "dueBy" : "",
+    "status" : "",
+    "previousNode" : "receive message",
+    "nextNode" : "send message",
+    "content" : "good, how are you?"
+  },
+  {
+    "_id" : "000abc2",
+    "name" : "email",
+    "type" : "",
+    "location" : "",
+    "start" : "",
+    "dueBy" : "",
+    "status" : "",
+    "previousNode" : "receive message",
+    "nextNode" : "send message",
+    "content" : "Are you good for our meeting tuesday?",
+    "subject" : "Meeting Tuesday"
+
+  },
+  {
+    "_id" : "000abc1",
+    "name" : "email",
+    "type" : "",
+    "location" : "",
+    "start" : "",
+    "dueBy" : "",
+    "status" : "",
+    "previousNode" : "receive message",
+    "nextNode" : "send message",
+    "content" : "Yes we are on for Tuesday",
+    "subject" : "Meeting Tuesday"
+
+  }
+
+]
