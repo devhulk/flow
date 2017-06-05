@@ -33,7 +33,7 @@
     "dueBy" : "",
     "status" : "",
     "previousNode" : "receive message",
-    "nextNode" : "send message",
+    "nextNode" : "status complete",
     "content" : "Are you good for our meeting tuesday?",
     "subject" : "Meeting Tuesday"
 

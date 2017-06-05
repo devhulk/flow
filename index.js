@@ -17,8 +17,13 @@ let getNodes = () => {
   let nodes  = JSON.parse(messages)
   nodes.forEach((action) => 
     {
-      var newAction = _.assignIn(new Node, action)  
+      let newAction = _.assignIn(new Node, action)  
       //console.log(newAction.name)
+      if (newAction.nextNode  === 'status complete'){
+        Flow.statusComplete(newAction, newAction.status)
+        console.log(newAction)
+
+      }
     })
 
 }
