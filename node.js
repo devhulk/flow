@@ -1,16 +1,7 @@
+const mongoose = require('mongoose')
+let Schema = mongoose.Schema
 
-class Node {
-  constructor() {
-    this._id = ''
-    this.name = ''
-    this.type = ''
-    this.location = ''
-    this.start = ''
-    this.dueBy = ''
-    this.status = 'incomplete'
-    this.previousNode = ''
-    this.nextNode = ''
-  } 
-}
+let nodeSchema =  new Schema({}, {strict : false})
+let model  = mongoose.model('Node',nodeSchema)
 
-module.exports = Node
+module.exports = ('dbmodel' , model)

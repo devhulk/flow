@@ -1,7 +1,7 @@
 const Flow = require('../flow')
 const express = require('express')
 const mongoose = require('mongoose')
-let Node = require('../nodemodel')
+let Node = require('../node')
 class NotificationRoutes {
 
   getRoutes(app,router) {

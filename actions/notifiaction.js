@@ -1,5 +1,4 @@
 const Flow = require('../flow')
-const Node = require('../node')
 require('dotenv').config()
 
 class Notification {
@@ -18,7 +17,7 @@ class Notification {
         let client = new twilio(accountSid, authToken)
 
           client.messages.create({
-            to: '+17046142039',  // Text this number
+            to: '+17046142039',  // Text this number 
             from: '+19804306958', //Twilio number
             body: mess,
           })
