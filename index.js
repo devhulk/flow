@@ -1,6 +1,6 @@
-//Use Proxy and Reflect API as a handler for our action functions
+//Use Proxy and Reflect API as a handler for our node functions
 const Flow = require('./flow')
-const Node = require('./node')
+const Register = require('./register')
 const fs = require('fs')
 const _ = require('lodash')
 
@@ -10,27 +10,18 @@ let messages
   //console.log(data)
   messages = data
    getNodes()
-})
-
+  //let reg = new Register
+ })
 let getNodes = () => {
   //console.log(messages)
   let nodes  = JSON.parse(messages)
-  nodes.forEach((action) => 
-    {
-      let newAction = _.assignIn(new Node, action)  
-      //console.log(newAction.name)
-      if (newAction.nextNode  === 'status complete'){
-        Flow.statusComplete(newAction, newAction.status)
-        console.log(newAction)
-
+  nodes.forEach((node) => {
+      //let reg = new Register
+      //console.log(newNode.name)
+      if (node.type  === 'sms'){
+        Flow.notification(node, node.type,[])
       }
-    })
+       
 
+      })
 }
-
-//  let task = new Node;
-//  console.log(task.status)
-//  Flow.statusComplete(task, 'complete')
-//  console.log(task.status)
-
-

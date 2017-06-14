@@ -1,10 +1,19 @@
-const Action = require('./action')
+const Notification = require('./actions/notifiaction')
+
 class Flow {
 
   static statusComplete(target,status) {
   let statusProxy = new Proxy(target, {}) 
     //the second console is not logging
     return statusProxy.status = 'complete'
+  }
+
+  static notification(target) {
+    let notificationProxy = new Proxy(target, {})
+    
+    Notification.send(target.type,target.body,target.auth)
+    
+    
   }
 
   

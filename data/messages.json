@@ -2,7 +2,8 @@
   {
     "_id" : "0002",
     "name" : "textmessage",
-    "type" : "",
+    "type" : "sms",
+    "body" : "hello from your fav workflow engine",
     "location" : "",
     "start" : "",
     "dueBy" : "",
