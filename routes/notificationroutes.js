@@ -1,3 +1,4 @@
+const Flow = require('../flow')
 const express = require('express')
 const mongoose = require('mongoose')
 let Node = require('../nodemodel')
@@ -7,6 +8,9 @@ class NotificationRoutes {
       router.route('/sms')
         .post((req,res) => {
          let node = new Node(req.body)
+          if (node.type == 'sms') {
+            Flow.notification(node) 
+          }
           node.markModified(node)
           node.save((err) => {
             if (err) console.log(err)

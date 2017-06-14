@@ -7,7 +7,7 @@ class Notification {
   //type is type of Notification(sms,email,etc)
   //body is message to be sent
   //auth is an array containing authentication keys if neccesary
-  static send(type,body,auth) {
+  static send(type,mess,auth) {
 
     if (type == 'sms') {
       let sendSMS = () => {
@@ -20,7 +20,7 @@ class Notification {
           client.messages.create({
             to: '+17046142039',  // Text this number
             from: '+19804306958', //Twilio number
-            body: 'Hello from Node',
+            body: mess,
           })
           .then((message) => {
             //console.log(message.sid)
